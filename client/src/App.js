@@ -2,9 +2,7 @@ import React from 'react';
 
 function App() {
   return (
-    <div className="container-fluid">
-      <h1 className='text-center'>Hello</h1>
-    </div>
+    <div className='text-center'>Shivali here.</div>
   );
 }
 
