@@ -1,9 +1,9 @@
-const express = require("express")
-const cors = require("cors")
-const morgan = require("morgan")
-const dotenv = require("dotenv")
-const colors = require("colors")
-const connectDb = require("./config/connectDb")
+const express = require("express");
+const cors = require("cors");
+const morgan = require("morgan");
+const dotenv = require("dotenv");
+const colors = require("colors");
+const connectDb = require("./config/connectDb");
 
 // Config dot env file
 dotenv.config();
@@ -12,24 +12,21 @@ dotenv.config();
 connectDb();
 
 // Rest object
-const app = express()
+const app = express();
 
 // Middlewares
-app.use(morgan('dev'))
-app.use(express.json())
-app.use(cors())
+app.use(morgan('dev'));
+app.use(express.json());
+app.use(cors());
 
 // Routes
-app.use('/api/v1/users', require('./routes/userRoute'))
+app.use('/api/v1/users', require('./routes/userRoute'));
 
-// Error Handling in Middlewares
-app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).send('Something broke!');
-});
+
+// Error Handling in Middleware
 
 // Port
-const PORT = process.env.PORT || 8080
+const PORT = 8080 || process.env.PORT 
 
 // Listen Server
 app.listen( PORT, ()=>{

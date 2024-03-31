@@ -1,28 +1,37 @@
-import React,{useState} from 'react';
-import {Form, Input, message} from 'antd'
+import React,{useState, useEffect} from 'react';
+import {Form, Input, message} from 'antd';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Spinner from '../components/Spinner';
 
+
 const Login = () => {
 
+
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  const [loading, setLoading] = useState(false);  
+    
 
      // Form Submit Function
 const submitHandler = async (values) => {
     try {
-      setLoading(true)
+      setLoading(true);
       const {data} = await axios.post('/users/login', values);
-      setLoading(false)
+      setLoading(false);
       message.success('Login Successful');
-      localStorage.setItem('user', JSON.stringify({...data, password: " "}))
-      navigate('/')
+      localStorage.setItem("user", JSON.stringify({ ...data.user, password: ""}));
+      navigate('/');
     } catch (error) {
-      setLoading(false)
-      message.error('Something went wrong')
+      setLoading(false);
+      message.error('Something went wrong');
     }
 };
+ //prevent for login user
+ useEffect(() => {
+  if (localStorage.getItem("user")) {
+    navigate("/");
+  }
+}, [navigate]);
   return (
     <>
        <div className='register-page'>
