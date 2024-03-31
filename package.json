@@ -9,8 +9,8 @@
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\" "
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["financial", "health", "management", "app"],
+  "author": "ShivaliWaghmare",
   "license": "MIT",
   "dependencies": {
     "colors": "^1.4.0",

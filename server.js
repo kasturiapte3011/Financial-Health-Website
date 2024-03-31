@@ -22,8 +22,14 @@ app.use(cors())
 // Routes
 app.use('/api/v1/users', require('./routes/userRoute'))
 
+// Error Handling in Middlewares
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something broke!');
+});
+
 // Port
-const PORT = 8080 || process.env.PORT
+const PORT = process.env.PORT || 8080
 
 // Listen Server
 app.listen( PORT, ()=>{
