@@ -33,26 +33,25 @@ const submitHandler = async (values) => {
   }
 }, [navigate]);
   return (
-    <>
-       <div className='register-page'>
+    <> 
+       <div className='login-page'>
         {loading && <Spinner />}
-            <Form layout='vertical' onFinish={submitHandler}>
-                  <h1>Login Form</h1>
-                <Form.Item label="Email" name="email">
-                    <Input type='email' autoComplete='off' />
+            <Form layout='vertical' onFinish={submitHandler} className='login-form'>
+                  <h1 className='login-title'>Login Form</h1>
+                <Form.Item label="Email address" name="email">
+                    <Input className='login-input' type='email' />
                 </Form.Item>
                 <Form.Item label="Password" name="password">
-                    <Input type='password' />
+                    <Input className='login-input' type='password' />
                 </Form.Item>
                 <div className='d-flex justify-content-between'>
-                     <Link to='/register' className='p-4'>Not a user ? Click here to Register</Link>
-                     <button className='btn btn-primary'>Login</button>
+                      <button className='btn btn-primary login-button'>Login</button>
                 </div>
+                <Link to='/register' className='p-4 signup-link'>Don't have an account? Register/Signup</Link>
             </Form>
         </div>
-   
     </>
   )
 }
 
-export default Login
+export default Login;
