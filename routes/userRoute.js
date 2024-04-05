@@ -12,5 +12,22 @@ router.post('/login', loginControllers);
 // POST || REGISTER USER
 router.post('/register', registerControllers);
 
+// POST || EXPENSE TRACKING
+// add your respective Controllers: name them mostly "expenseControllers"
+router.post('/expense');
+
+// POST || INVESMENT PORTFOLIO
+// add your respective Controllers: name them mostly "portfolioContollers"
+router.post('/portfolio');
+
+// POST || FINANCIAL BLOG
+// add your respective Controllers: name them mostly "blogControllers"
+router.post('/blog');
+
+// POST || CALCULATOR
+// add your respective Controllers: name them mostly "calculatorControllers"
+router.post('/calculator');
+
+
 // Export:
 module.exports = router;

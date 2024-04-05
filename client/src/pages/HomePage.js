@@ -23,7 +23,7 @@ const HomePage = () => {
           <li>Interactive Calculators: Utilize our suite of calculators to estimate returns, plan budgets, and analyze various financial scenarios.</li>
         </ul>
         <div className="navigation-buttons">
-          <Link to="/expense-tracking" className="btn btn-primary">Expense Tracking</Link>
+          <Link to="/expense" className="btn btn-primary">Expense Tracking</Link>
           <Link to="/investment-analysis" className="btn btn-primary">Investment Analysis</Link>
           <Link to="/financial-blog" className="btn btn-primary">Financial Blog</Link>
           <Link to="/calculator" className="btn btn-primary">Calculator</Link>
