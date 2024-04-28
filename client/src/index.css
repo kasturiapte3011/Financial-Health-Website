@@ -202,3 +202,10 @@ h1 {
 .btn:hover {
   background-color: #27ae60; /* Darker green on hover */
 }
+
+
+
+/* tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

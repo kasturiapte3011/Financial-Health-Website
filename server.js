@@ -23,6 +23,10 @@ app.use(cors());
 app.use('/api/v1/users', require('./routes/userRoute'));
 
 
+app.get('/', (req, res) => {
+    res.send('Welcome to Wealth Wise API'); // You can customize this message
+});
+
 // Error Handling in Middleware
 
 // Port
