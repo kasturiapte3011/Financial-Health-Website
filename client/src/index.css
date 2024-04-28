@@ -236,3 +236,8 @@ h1 {
 }
 
 
+
+/* tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
