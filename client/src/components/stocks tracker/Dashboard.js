@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
-import ThemeContext from "../context/ThemeContext";
+import ThemeContext from "../Context/Themecontext";
 import Overview from "./Overview";
 import Details from "./Details";
 import Chart from "./Chart";
 import Header from "./Header";
-import StockContext from "../context/StockContext";
+import StockContext from "../Context/Stockcontext";
 import { fetchStockDetails, fetchQuote } from "../utils/api/stock-api";
 
 const Dashboard = () => {
